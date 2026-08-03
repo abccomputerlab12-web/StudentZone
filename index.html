@@ -4,35 +4,269 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Student Zone</title>
+
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f8ff;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.logo-area h2{
+    color:#004aad;
+}
+
+/* HERO */
+
+.hero{
+    min-height:70vh;
+    background:linear-gradient(135deg,#004aad,#007bff);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin-bottom:35px;
+}
+
+/* BUTTONS */
+
+.button-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.btn{
+    padding:16px 30px;
+    background:white;
+    color:#004aad;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:50px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* FEATURES */
+
+.features{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.features h2{
+    color:#004aad;
+    margin-bottom:15px;
+}
+
+.features p{
+    max-width:800px;
+    margin:auto;
+    color:#555;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:60px 8%;
+    background:white;
+}
+
+.gallery h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#004aad;
+}
+
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.image-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.image-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.image-card .content{
+    padding:15px;
+}
+
+.image-card h3{
+    color:#004aad;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#002b66;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.button-group{
+    flex-direction:column;
+    align-items:center;
+}
+}
+</style>
+
 </head>
 <body>
 
-<header>
-    <img src="assets/logo.png" alt="Logo" class="logo">
-    <h1>Student Zone</h1>
-    <p>Your Academic Portal</p>
-</header>
+<nav>
 
-<div class="container">
-    <a href="results.html" class="card">
-        <h2>📊 Exam Results</h2>
-        <p>View your examination results.</p>
-    </a>
-
-    <a href="materials.html" class="card">
-        <h2>📚 Study Materials</h2>
-        <p>Download notes and resources.</p>
-    </a>
-
-    <a href="help.html" class="card">
-        <h2>❓ Help & Support</h2>
-        <p>Get assistance and information.</p>
-    </a>
+<div class="logo-area">
+<img src="assets/logo.png" alt="Campus Logo" class="logo">
+<h2>Student Zone</h2>
 </div>
 
+</nav>
+
+<section class="hero">
+
+<h1>Welcome to Student Zone</h1>
+
+<p>
+Access Exam Results, Study Materials, Notices and Academic Resources
+all in one place.
+</p>
+
+<div class="button-group">
+
+<a href="results.html" class="btn">
+<i class="fas fa-chart-line"></i> Exam Results
+</a>
+
+<a href="materials.html" class="btn">
+<i class="fas fa-book"></i> Study Materials
+</a>
+
+<a href="help.html" class="btn">
+<i class="fas fa-headset"></i> Help & Support
+</a>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>Your Digital Learning Hub</h2>
+
+<p>
+Student Zone provides easy access to academic resources, examination
+results, notices, study materials and support services. Stay connected
+with your learning journey anytime, anywhere.
+</p>
+
+</section>
+
+<section class="gallery">
+
+<h2>Campus Life & Learning</h2>
+
+<div class="image-grid">
+
+<div class="image-card">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="">
+<div class="content">
+<h3>Learn Together</h3>
+<p>Collaborate with friends and improve your academic performance.</p>
+</div>
+</div>
+
+<div class="image-card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+<div class="content">
+<h3>Study Resources</h3>
+<p>Get notes, PDFs, assignments and previous question papers.</p>
+</div>
+</div>
+
+<div class="image-card">
+<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="">
+<div class="content">
+<h3>Achieve Success</h3>
+<p>Track your results and academic progress with confidence.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
 <footer>
-    <p>© 2026 Student Zone</p>
+<p>© 2026 Student Zone | Empowering Students Through Technology</p>
 </footer>
 
 </body>
