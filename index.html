@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Student Zone</title>
 
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -16,22 +15,29 @@
     font-family:'Segoe UI',sans-serif;
 }
 
-body{
-    background:#f5f8ff;
+html{
+    scroll-behavior:smooth;
 }
 
-/* NAVBAR */
+body{
+    background:#f5f8ff;
+    color:#333;
+}
+
+/* =======================
+   NAVBAR
+======================= */
 
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 8%;
-    background:#fff;
+    padding:15px 5%;
+    background:#ffffff;
     box-shadow:0 2px 15px rgba(0,0,0,0.08);
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
 }
 
 .logo-area{
@@ -48,227 +54,387 @@ nav{
 
 .logo-area h2{
     color:#004aad;
+    font-size:28px;
 }
 
-/* HERO */
+.button-group{
+    display:flex;
+    gap:15px;
+}
+
+.nav-btn{
+    padding:12px 22px;
+    background:#004aad;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:#0066ff;
+    transform:translateY(-3px);
+}
+
+/* =======================
+   HERO SECTION
+======================= */
 
 .hero{
-    min-height:70vh;
-    background:linear-gradient(135deg,#004aad,#007bff);
-    color:white;
+    min-height:80vh;
+    background:
+    linear-gradient(rgba(0,74,173,0.75),
+    rgba(0,123,255,0.75)),
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600');
+    background-size:cover;
+    background-position:center;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:30px;
+    color:white;
+    padding:20px;
 }
 
 .hero h1{
-    font-size:3rem;
+    font-size:4rem;
     margin-bottom:15px;
 }
 
 .hero p{
-    font-size:1.2rem;
-    max-width:700px;
-    margin-bottom:35px;
+    font-size:1.3rem;
+    max-width:800px;
+    margin-bottom:30px;
 }
 
-/* BUTTONS */
-
-.button-group{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
-}
-
-.btn{
-    padding:16px 30px;
+.hero-btn{
     background:white;
     color:#004aad;
     text-decoration:none;
-    font-weight:600;
+    padding:15px 30px;
     border-radius:50px;
+    font-weight:bold;
     transition:.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
-.btn:hover{
+.hero-btn:hover{
     transform:translateY(-5px);
 }
 
-/* FEATURES */
+/* =======================
+   FEATURES
+======================= */
 
 .features{
-    padding:70px 8%;
+    padding:80px 8%;
     text-align:center;
 }
 
-.features h2{
+.section-title{
+    font-size:2.5rem;
     color:#004aad;
     margin-bottom:15px;
 }
 
-.features p{
-    max-width:800px;
+.section-text{
+    max-width:900px;
     margin:auto;
-    color:#555;
+    color:#666;
+    line-height:1.7;
 }
 
-/* GALLERY */
+.feature-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:50px;
+}
+
+.feature-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+}
+
+.feature-card i{
+    font-size:45px;
+    color:#004aad;
+    margin-bottom:15px;
+}
+
+.feature-card h3{
+    margin-bottom:10px;
+}
+
+/* =======================
+   GALLERY
+======================= */
 
 .gallery{
-    padding:60px 8%;
     background:white;
+    padding:80px 8%;
 }
 
-.gallery h2{
+.gallery-title{
     text-align:center;
-    margin-bottom:40px;
+    font-size:2.5rem;
     color:#004aad;
+    margin-bottom:50px;
 }
 
 .image-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .image-card{
-    background:#fff;
-    border-radius:15px;
+    border-radius:20px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
+    background:white;
 }
 
 .image-card img{
     width:100%;
-    height:220px;
+    height:230px;
     object-fit:cover;
 }
 
-.image-card .content{
-    padding:15px;
+.content{
+    padding:20px;
 }
 
-.image-card h3{
+.content h3{
     color:#004aad;
     margin-bottom:10px;
 }
 
-/* FOOTER */
+/* =======================
+   STATS
+======================= */
+
+.stats{
+    background:#004aad;
+    color:white;
+    padding:70px 8%;
+}
+
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    text-align:center;
+    gap:30px;
+}
+
+.stat h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+/* =======================
+   FOOTER
+======================= */
 
 footer{
     background:#002b66;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
+
+/* =======================
+   MOBILE
+======================= */
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:2.2rem;
-}
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
 
-.button-group{
-    flex-direction:column;
-    align-items:center;
-}
+    .button-group{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .nav-btn{
+        padding:10px 16px;
+        font-size:14px;
+    }
 }
 </style>
 
 </head>
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 
-<div class="logo-area">
-<img src="assets/logo.png" alt="Campus Logo" class="logo">
-<h2>Student Zone</h2>
+    <div class="logo-area">
+        <img src="assets/logo.png" alt="Campus Logo" class="logo">
+        <h2>Student Zone</h2>
+    </div>
 
-<div class="button-group">
+    <div class="button-group">
 
-<a href="results.html" class="btn">
-<i class="fas fa-chart-line"></i> Exam Results
-</a>
+        <a href="results.html" class="nav-btn">
+            <i class="fas fa-chart-line"></i> Results
+        </a>
 
-<a href="materials.html" class="btn">
-<i class="fas fa-book"></i> Study Materials
-</a>
+        <a href="materials.html" class="nav-btn">
+            <i class="fas fa-book"></i> Materials
+        </a>
 
-<a href="help.html" class="btn">
-<i class="fas fa-headset"></i> Help & Support
-</a>
+        <a href="help.html" class="nav-btn">
+            <i class="fas fa-headset"></i> Help
+        </a>
 
-</div>
-</div>
+    </div>
 
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
 
-<h1>Welcome to Student Zone</h1>
+    <h1>Welcome to Student Zone</h1>
 
-<p>
-Access Exam Results, Study Materials, Notices and Academic Resources
-all in one place.
-</p>
+    <p>
+        Access your exam results, study materials, notices,
+        assignments and academic resources anytime, anywhere.
+    </p>
 
-
+    <a href="materials.html" class="hero-btn">
+        Explore Resources
+    </a>
 
 </section>
+
+<!-- FEATURES -->
 
 <section class="features">
 
-<h2>Your Digital Learning Hub</h2>
+    <h2 class="section-title">Your Academic Portal</h2>
 
-<p>
-Student Zone provides easy access to academic resources, examination
-results, notices, study materials and support services. Stay connected
-with your learning journey anytime, anywhere.
-</p>
+    <p class="section-text">
+        Student Zone helps students access academic resources,
+        download study materials, view results and stay updated
+        with important notices from the campus.
+    </p>
+
+    <div class="feature-cards">
+
+        <div class="feature-card">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Exam Results</h3>
+            <p>Quickly access and view examination results.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-book-open"></i>
+            <h3>Study Materials</h3>
+            <p>Download notes, PDFs and previous questions.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Notices</h3>
+            <p>Stay informed with latest campus announcements.</p>
+        </div>
+
+    </div>
 
 </section>
+
+<!-- GALLERY -->
 
 <section class="gallery">
 
-<h2>Campus Life & Learning</h2>
+    <h2 class="gallery-title">Campus Life & Learning</h2>
 
-<div class="image-grid">
+    <div class="image-grid">
 
-<div class="image-card">
-<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="">
-<div class="content">
-<h3>Learn Together</h3>
-<p>Collaborate with friends and improve your academic performance.</p>
-</div>
-</div>
+        <div class="image-card">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600" alt="">
+            <div class="content">
+                <h3>Collaborative Learning</h3>
+                <p>Study together and improve academic performance.</p>
+            </div>
+        </div>
 
-<div class="image-card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
-<div class="content">
-<h3>Study Resources</h3>
-<p>Get notes, PDFs, assignments and previous question papers.</p>
-</div>
-</div>
+        <div class="image-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="">
+            <div class="content">
+                <h3>Digital Resources</h3>
+                <p>Access notes, assignments and course materials.</p>
+            </div>
+        </div>
 
-<div class="image-card">
-<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="">
-<div class="content">
-<h3>Achieve Success</h3>
-<p>Track your results and academic progress with confidence.</p>
-</div>
-</div>
+        <div class="image-card">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=600" alt="">
+            <div class="content">
+                <h3>Academic Success</h3>
+                <p>Track your progress and achieve your goals.</p>
+            </div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stats-container">
+
+        <div class="stat">
+            <h2>100+</h2>
+            <p>Study Materials</p>
+        </div>
+
+        <div class="stat">
+            <h2>500+</h2>
+            <p>Students</p>
+        </div>
+
+        <div class="stat">
+            <h2>50+</h2>
+            <p>Exam Results</p>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>Access</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
-<p>© 2026 Student Zone | Empowering Students Through Technology</p>
+    <p>© 2026 Student Zone | Empowering Students Through Technology</p>
 </footer>
 
 </body>
