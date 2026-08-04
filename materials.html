@@ -4,25 +4,156 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Study Materials</title>
-<link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    margin:0;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.page-content{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.materials{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:20px;
+}
+
+.material-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.material-card h3{
+    margin:10px 0;
+}
+
+.material-card a{
+    display:inline-block;
+    margin:5px;
+    padding:8px 15px;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.view{
+    background:#2563eb;
+    color:white;
+}
+
+.download{
+    background:#16a34a;
+    color:white;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:10px 20px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+</style>
 </head>
 <body>
 
 <header>
-    <h1>Study Materials</h1>
+    <h1>📚 Study Materials</h1>
 </header>
 
 <div class="page-content">
-    <h2>Resources</h2>
 
-    <ul>
-        <li><a href="#">Computer Science Notes</a></li>
-        <li><a href="#">Database Management System</a></li>
-        <li><a href="#">Networking Notes</a></li>
-        <li><a href="#">Previous Question Papers</a></li>
-    </ul>
+<div class="materials">
 
-    <a href="index.html" class="btn">⬅ Back Home</a>
+    <div class="material-card">
+        <div style="font-size:50px;">📄</div>
+        <h3>DBMS Notes</h3>
+
+        <a class="view"
+           href="assets/materials/first unit test.docx"
+           target="_blank">
+           View
+        </a>
+
+        <a class="download"
+           href="assets/materials/first unit test.docx"
+           download>
+           Download
+        </a>
+    </div>
+
+    <div class="material-card">
+        <div style="font-size:50px;">📄</div>
+        <h3>Networking Notes</h3>
+
+        <a class="view"
+           href="assets/materials/Saturday test 1.docx"
+           target="_blank">
+           View
+        </a>
+
+        <a class="download"
+           href="assets/materials/Saturday test 1.docx"
+           download>
+           Download
+        </a>
+    </div>
+
+    <div class="material-card">
+        <div style="font-size:50px;">📝</div>
+        <h3>Computer Science Notes</h3>
+
+        <a class="view"
+           href="assets/materials/first unit test.docx"
+           target="_blank">
+           Open
+        </a>
+
+        <a class="download"
+           href="assets/materials/first unit test.docx"
+           download>
+           Download
+        </a>
+    </div>
+
+    <div class="material-card">
+        <div style="font-size:50px;">📝</div>
+        <h3>Computer Science Notes</h3>
+
+        <a class="view"
+           href="assets/materials/unit 2.docx"
+           target="_blank">
+           Open
+        </a>
+
+        <a class="download"
+           href="assets/materials/unit 2.docx"
+           download>
+           Download
+        </a>
+    </div>
+
+</div>
+
+<a href="index.html" class="btn">⬅ Back Home</a>
+
 </div>
 
 </body>
